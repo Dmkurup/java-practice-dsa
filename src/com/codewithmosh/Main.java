@@ -52,6 +52,18 @@ public class Main {
                reverser(queue);
         System.out.println(queue);
 
+        ArrayQueue myq =new ArrayQueue(5);
+        myq.enqueue( 10 );
+        myq.enqueue( 20 );
+        myq.enqueue( 30 );
+        myq.enqueue( 40 );
+        myq.dequeue();
+        myq.dequeue();
+        myq.enqueue( 50 );
+        myq.enqueue( 60 );
+        myq.enqueue( 70 );
+        System.out.println(myq);
+
     }
 
     public static void reverser(Queue<Integer> queue){
