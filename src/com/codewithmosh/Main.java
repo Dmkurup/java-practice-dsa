@@ -64,6 +64,35 @@ public class Main {
         myq.enqueue( 70 );
         System.out.println(myq);
 
+
+
+        QueueWithTwoStacks queStack = new QueueWithTwoStacks();
+
+        queStack.enqueue( 10 );
+        queStack.enqueue( 20 );
+        queStack.enqueue( 30 );
+        queStack.enqueue( 40 );
+        queStack.dequeue();
+        int top =queStack.dequeue();
+        System.out.println(top);
+        queStack.enqueue( 50 );
+        queStack.enqueue( 60 );
+        queStack.enqueue( 70 );
+        int top3 =queStack.dequeue();
+        System.out.println(top3);
+        int top4= queStack.dequeue();
+        System.out.println(top4);
+        queStack.enqueue( 80 );
+        int top5= queStack.dequeue();
+        System.out.println(top5);
+
+//        queStack.dequeue();
+//        queStack.dequeue();
+
+//        int top =queStack.dequeue();
+//        System.out.println(top);
+
+
     }
 
     public static void reverser(Queue<Integer> queue){
