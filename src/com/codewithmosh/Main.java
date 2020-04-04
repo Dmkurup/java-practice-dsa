@@ -49,9 +49,14 @@ public class Main {
                queue.add( 10 );
                queue.add(20);
                queue.add(30);
-               reverser(queue);
-        System.out.println(queue);
+        queue.add(40);
+        queue.add(50);
 
+        QueueReverser qr = new QueueReverser();
+        qr.reverser(queue,3);
+        System.out.println("hi"+queue);
+
+       //Queue with array
         ArrayQueue myq =new ArrayQueue(5);
         myq.enqueue( 10 );
         myq.enqueue( 20 );
@@ -64,38 +69,23 @@ public class Main {
         myq.enqueue( 70 );
         System.out.println(myq);
 
-
-
+        //Queue with stacks
         QueueWithTwoStacks queStack = new QueueWithTwoStacks();
-
         queStack.enqueue( 10 );
         queStack.enqueue( 20 );
         queStack.enqueue( 30 );
         queStack.enqueue( 40 );
         queStack.dequeue();
-        int top =queStack.dequeue();
-        System.out.println(top);
-        queStack.enqueue( 50 );
-        queStack.enqueue( 60 );
-        queStack.enqueue( 70 );
-        int top3 =queStack.dequeue();
-        System.out.println(top3);
-        int top4= queStack.dequeue();
-        System.out.println(top4);
-        queStack.enqueue( 80 );
-        int top5= queStack.dequeue();
-        System.out.println(top5);
 
-//        queStack.dequeue();
-//        queStack.dequeue();
-
-//        int top =queStack.dequeue();
-//        System.out.println(top);
-
-
+        ///Stack with Queues
+        StackWithQueues stq = new StackWithQueues ();
+        stq.push( 10 );
+        stq.push( 20 );
+        stq.push( 30 );
+        System.out.println("StackwithQ"+stq.pop( ));
     }
 
-    public static void reverser(Queue<Integer> queue){
+    public static void reverser2(Queue<Integer> queue){
         //10 20 30 o/p 30 20 10
         java.util.Stack<Integer> stack = new java.util.Stack<>();
 
