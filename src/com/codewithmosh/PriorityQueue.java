@@ -9,15 +9,8 @@ public class PriorityQueue {
     public void add(int item){
         if(isFull())
             throw new IllegalStateException(  );
-        int i;
-        for(i= count-1;i>=0;i--){
-            if(items[i]>item)
-                items[i+1]=items[i];
-            else{
-                break;
-            }
-        }
-        items[i+1]=item;
+        int i =shifttoRight(item);
+        items[i]=item;
         count++;
     }
 
@@ -26,6 +19,19 @@ public class PriorityQueue {
             throw new IllegalStateException();
 
         return items[--count];
+    }
+
+    public int shifttoRight(int item){
+        int i;
+        for(i= count-1;i>=0;i--){
+            if(items[i]>item)
+                items[i+1]=items[i];
+            else{
+                break;
+            }
+        }
+        return i+1;
+
     }
     public boolean isEmpty() {
         return count == 0;

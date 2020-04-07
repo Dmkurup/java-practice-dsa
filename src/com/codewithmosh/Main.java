@@ -1,10 +1,6 @@
 package com.codewithmosh;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Queue;
-
+import java.util.*;
 
 
 public class Main {
@@ -95,6 +91,28 @@ public class Main {
         System.out.println(pq);
         pq.remove();
         System.out.println(pq);
+
+
+        //HshMaps
+
+        Map <Integer,String> map = new HashMap<>(  );
+        map.put(1,"Mosh");
+        map.put(2,"Joey");
+        System.out.println(map);
+
+//        for ( item:map.entrySet()) {
+//            System.out.println(item);
+//        }
+
+
+        CharFinder finder = new CharFinder();
+        char ch =finder.findChar( "a green apple" );
+        System.out.println(ch);
+
+
+        FindRepeats find = new FindRepeats();
+        char ch2 =find.findRepeat( "green apple" );
+        System.out.println(ch2);
     }
 
     public static void reverser2(Queue<Integer> queue){
