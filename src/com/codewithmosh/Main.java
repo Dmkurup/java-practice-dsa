@@ -83,6 +83,18 @@ public class Main {
         stq.push( 20 );
         stq.push( 30 );
         System.out.println("StackwithQ"+stq.pop( ));
+
+
+        //Priority Queue
+
+        PriorityQueue pq = new PriorityQueue ();
+        pq.add(1);
+        pq.add(5);
+        pq.add(3);
+        pq.add(7);
+        System.out.println(pq);
+        pq.remove();
+        System.out.println(pq);
     }
 
     public static void reverser2(Queue<Integer> queue){
