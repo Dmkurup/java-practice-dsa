@@ -113,6 +113,25 @@ public class Main {
         FindRepeats find = new FindRepeats();
         char ch2 =find.findRepeat( "green apple" );
         System.out.println(ch2);
+
+        HashTable table = new HashTable();
+        table.put(6,"a");
+        table.put(8,"b");
+        table.put(11,"c");
+        table.put(11,"d");
+        System.out.println(table.get( 11));
+
+
+
+        HashTableExercises ht = new HashTableExercises();
+        int [] arr = {2,7,11,5};
+        int result =ht.mostFrequent(arr);
+        System.out.println(result);
+        int countSum = ht.countPairsWithDiff( arr,2 );
+        System.out.println(countSum);
+        int [] resultIndices = ht.twoSum( arr,9 );
+        System.out.println(Arrays.toString( resultIndices ));
+
     }
 
     public static void reverser2(Queue<Integer> queue){
