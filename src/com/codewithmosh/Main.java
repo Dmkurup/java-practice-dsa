@@ -132,6 +132,38 @@ public class Main {
         int [] resultIndices = ht.twoSum( arr,9 );
         System.out.println(Arrays.toString( resultIndices ));
 
+
+        Tree tree = new Tree();
+        tree.insert( 7 );
+        tree.insert(4);
+        tree.insert(1);
+        tree.insert(6);
+        tree.insert(9);
+        tree.insert(8);
+        tree.insert(10);
+       Tree tree2 = new Tree();
+       tree2.insert( 7 );
+       tree2.insert(4);
+       tree2.insert(1);
+       tree2.insert(6);
+       tree2.insert(9);
+       tree2.insert(8);
+       tree2.insert(10);
+      //  tree.traversePreOrder(  );
+       // tree.traverseInOrder();
+      //  tree.traversePostOrder();
+
+       System.out.println((tree.height()));
+       System.out.println((tree.min()));
+       System.out.println((tree.equals(tree2)));
+       System.out.println((tree.findMax()));
+       System.out.println((tree.max()));
+
+ AvlTree avlTree = new AvlTree();
+       avlTree.insert( 30 );
+       avlTree.insert(20);
+       avlTree.insert(10);
+
     }
 
     public static void reverser2(Queue<Integer> queue){
